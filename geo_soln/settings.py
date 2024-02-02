@@ -37,6 +37,11 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "django.contrib.gis",
+    "soln",
+    "leaflet",
+    "rest_framework",
+    "rest_framework_gis",
 ]
 
 MIDDLEWARE = [
@@ -74,9 +79,12 @@ WSGI_APPLICATION = "geo_soln.wsgi.application"
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+    'default': {
+        'ENGINE': 'django.contrib.gis.db.backends.postgis',
+        'NAME': 'geo_soln',
+        'USER': 'postgres',
+        'PASSWORD': 'soln',
+        'HOST': 'localhost'
     }
 }
 
