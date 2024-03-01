@@ -12,6 +12,7 @@ django-cors-headers = "*"
 django-environ = "*"
 psycopg = "*"
 psycopg-binary = "*"
+drf-spectacular = "*"
 
 [dev-packages]
 black = "*"
